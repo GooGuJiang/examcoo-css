@@ -1,0 +1,178 @@
+/* ==UserStyle==
+@name         examcoo-css
+@namespace      github.com/openstyles/stylus
+@version        0.0.1
+@description    A new userstyle
+@author         咕谷酱
+==/UserStyle== */
+@-moz-document domain("examcoo.com") {
+	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200&display=swap');
+
+	* {
+		font-family: 'Noto Sans SC', sans-serif;
+	}
+}
+@-moz-document url("https://examcoo.com/") {
+	/*.header{
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}*/
+	.main {
+		background-color: #9aaec72b;
+		border-radius: 20px;
+		box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, .05);
+	}
+	.input-box {
+		height: 60px;
+	}
+	.br-nopadding {
+		margin-top: 15px;
+	}
+	.flot-container {
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	}
+	.stat-container {
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+	.button-c > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.button-b > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.button-i > a {
+		border-radius: 10px;
+	}
+}
+
+@-moz-document url("https://examcoo.com/passport/login") {
+	/*.header{
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}*/
+	/*自动登录单选框css*/
+	@keyframes open_ck {
+		from {
+			background-color: #cccccc;
+		}
+		to {
+			background-color: #0c66ff;
+		}
+	}
+	#autoLogin {
+		margin-top: 5px;
+		margin-left: 0;
+		width: 46px;
+		height: 22px;
+		box-sizing: border-box;
+		position: relative;
+		background: #cccccc;
+		border: 1px solid #dfdfdf;
+		border-radius: 16px;
+		line-height: 20.5px;
+		text-align: center;
+		cursor: pointer;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		outline: 0;
+	}
+
+	#autoLogin:active,
+	#autoLogin:visited {
+		outline: none;
+	}
+
+	#autoLogin:before {
+		content: attr(data-off);
+		position: absolute;
+		top: 0;
+		left: 1px;
+		padding-left: 13px;
+		border-radius: 15px;
+		background-color: #cccccc;
+		color: #fff;
+		font-size: 12px;
+	}
+
+	#autoLogin:after {
+		content: " ";
+		position: absolute;
+		top: 4px;
+		left: 2px;
+		width: 12px;
+		height: 12px;
+		border-radius: 15px;
+		background-color: #ffffff;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+		transition: transform 0.3s;
+	}
+
+	#autoLogin:checked {
+		border-color: #0c66ff;
+		background-color: #0c66ff;
+		animation: open_ck 0.13s 1;
+	}
+
+	#autoLogin:checked:after {
+		transform: translateX(28px);
+	}
+
+	#autoLogin:checked:before {
+		content: attr(data-on);
+		padding-left: 0px;
+		padding-left: 2px;
+		background-color: #0c66ff;
+		color: #fff;
+		width: 24px;
+	}
+	/*结束*/
+	.main-floatbox {
+		background-color: #9aaec72b;
+		border-radius: 20px;
+		margin-top: 15px;
+		box-shadow: inset 0px 0px 2px 2px rgba(17, 17, 17, .08);
+	}
+	.button-c > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.button-b > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.button-d > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.wInput {
+		display: block;
+		width: 100%;
+		padding: 0.5rem 0.75rem;
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.4rem;
+		color: #495057;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #d2d6da;
+		appearance: none;
+		border-radius: 0.5rem;
+		/*transition: box-shadow 0.15s ease, border-color 0.15s ease;*/
+	}
+	.captcha-image > img {
+		border-radius: 0.5rem;
+	}
+	label[for="autoLogin"] {
+		user-select: none;
+		position: absolute;
+		margin-top: 2px;
+	}
+	.input-tips {
+		margin-top: 1px;
+	}
+}
