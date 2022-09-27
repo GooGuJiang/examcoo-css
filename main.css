@@ -176,3 +176,86 @@
 		margin-top: 1px;
 	}
 }
+@-moz-document url("https://examcoo.com/passport/register") {
+	.main-floatbox {
+		background-color: #9aaec72b;
+		border-radius: 20px;
+		margin-top: 15px;
+		box-shadow: inset 0px 0px 2px 2px rgba(17, 17, 17, .08);
+	}
+	.button-c > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.button-b > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.button-d > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.wInput {
+		display: block;
+		width: 100%;
+		padding: 0.5rem 0.75rem;
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.4rem;
+		color: #495057;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #d2d6da;
+		appearance: none;
+		border-radius: 0.5rem;
+		/*transition: box-shadow 0.15s ease, border-color 0.15s ease;*/
+	}
+	.main-floatbox {
+		margin-bottom: 20px;
+	}
+	.captcha-image > img {
+		border-radius: 0.5rem;
+	}
+	.nobr-nopadding > jq-tooltip-over {
+		border-radius: 20px;
+	}
+}
+@-moz-document url("https://examcoo.com/index/mobile") {
+	.button-c > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.button-b > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.button-d > a {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.lightblue-header {
+		border-collapse:separate;
+	}
+	th[colspan="2"] {
+		border-radius: 10px;
+	}
+	th[colspan="2"] >div {
+		margin-left: 10px;
+		margin-bottom: 2px;
+		text-align: center;
+	}
+	.input-box >img{
+		display: none;
+	}
+	.input-box{ /*设置mobile页面二维码*/
+		background-image: url("https://img.examcoo.com/1458/themes/metro/images/v1_8j.png");
+		margin: 0 auto;
+		margin-top: 10px;
+		border-radius: 20px;
+		border-style: dashed;
+		border-width: 1px;
+		height: 300px;
+		width: 300px;
+		user-select: none;
+	}
+}
