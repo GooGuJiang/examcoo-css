@@ -6,256 +6,408 @@
 @author         咕谷酱
 ==/UserStyle== */
 @-moz-document domain("examcoo.com") {
-	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@200&display=swap');
 
-	* {
-		font-family: 'Noto Sans SC', sans-serif;
-	}
+    * {
+        font-family: 'Noto Sans SC', sans-serif;
+    }
 }
 @-moz-document url("https://examcoo.com/") {
-	/*.header{
-		border-bottom-left-radius: 20px;
-		border-bottom-right-radius: 20px;
-	}*/
-	.main {
-		background-color: #9aaec72b;
-		border-radius: 20px;
-		box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, .05);
-	}
-	.input-box {
-		height: 60px;
-	}
-	.br-nopadding {
-		margin-top: 15px;
-	}
-	.flot-container {
-		border-top-left-radius: 20px;
-		border-bottom-left-radius: 20px;
-	}
-	.stat-container {
-		border-top-right-radius: 20px;
-		border-bottom-right-radius: 20px;
-	}
-	.button-c > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.button-b > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.button-i > a {
-		border-radius: 10px;
-	}
+    .header {
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .3);
+    }
+    .main {
+        background-color: #9aaec72b;
+        border-radius: 20px;
+        /*box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, .05);*/
+    }
+    .input-box {
+        height: 60px;
+    }
+    .br-nopadding {
+        margin-top: 15px;
+    }
+    .flot-container {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    .stat-container {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .button-c > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button-b > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button-i > a {
+        border-radius: 10px;
+    }
 }
 
 @-moz-document url("https://examcoo.com/passport/login") {
-	/*.header{
+    /*.header{
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
 	}*/
-	/*自动登录单选框css*/
-	@keyframes open_ck {
-		from {
-			background-color: #cccccc;
-		}
-		to {
-			background-color: #0c66ff;
-		}
-	}
-	#autoLogin {
-		margin-top: 5px;
-		margin-left: 0;
-		width: 46px;
-		height: 22px;
-		box-sizing: border-box;
-		position: relative;
-		background: #cccccc;
-		border: 1px solid #dfdfdf;
-		border-radius: 16px;
-		line-height: 20.5px;
-		text-align: center;
-		cursor: pointer;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		outline: 0;
-	}
+    /*自动登录单选框css*/
+    @keyframes open_ck {
+        from {
+            background-color: #cccccc;
+            border-color: #cccccc;
+        }
+        to {
+            background-color: #0c66ff;
+            border-color: #0c66ff;
+        }
+    }
 
-	#autoLogin:active,
-	#autoLogin:visited {
-		outline: none;
-	}
+    @keyframes open_off {
+        from {
+            background-color: #0c66ff;
+        }
+        to {
+            background-color: #cccccc;
+        }
+    }
+    #autoLogin {
+        margin-top: 5px;
+        margin-left: 0;
+        width: 46px;
+        height: 22px;
+        box-sizing: border-box;
+        position: relative;
+        background: #cccccc;
+        border: 1px solid #dfdfdf;
+        border-radius: 16px;
+        line-height: 20.5px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: 0;
+    }
 
-	#autoLogin:before {
-		content: attr(data-off);
-		position: absolute;
-		top: 0;
-		left: 1px;
-		padding-left: 13px;
-		border-radius: 15px;
-		background-color: #cccccc;
-		color: #fff;
-		font-size: 12px;
-	}
+    #autoLogin:active,
+    #autoLogin:visited {
+        outline: none;
+    }
 
-	#autoLogin:after {
-		content: " ";
-		position: absolute;
-		top: 4px;
-		left: 2px;
-		width: 12px;
-		height: 12px;
-		border-radius: 15px;
-		background-color: #ffffff;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-		transition: transform 0.3s;
-	}
+    #autoLogin:before {
+        content: attr(data-off);
+        position: absolute;
+        top: 0;
+        left: 1px;
+        padding-left: 13px;
+        border-radius: 15px;
+        background-color: #cccccc;
+        color: #fff;
+        font-size: 12px;
+    }
 
-	#autoLogin:checked {
-		border-color: #0c66ff;
-		background-color: #0c66ff;
-		animation: open_ck 0.13s 1;
-	}
+    #autoLogin:after {
+        content: " ";
+        position: absolute;
+        top: 4px;
+        left: 2px;
+        width: 12px;
+        height: 12px;
+        border-radius: 15px;
+        background-color: #ffffff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s;
+    }
 
-	#autoLogin:checked:after {
-		transform: translateX(28px);
-	}
+    #autoLogin:checked {
+        border-color: #0c66ff;
+        background-color: #0c66ff;
+        animation: open_ck 0.29s 1;
+    }
 
-	#autoLogin:checked:before {
-		content: attr(data-on);
-		padding-left: 0px;
-		padding-left: 2px;
-		background-color: #0c66ff;
-		color: #fff;
-		width: 24px;
-	}
-	/*结束*/
-	.main-floatbox {
-		background-color: #9aaec72b;
-		border-radius: 20px;
-		margin-top: 15px;
-		box-shadow: inset 0px 0px 2px 2px rgba(17, 17, 17, .08);
-	}
-	.button-c > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.button-b > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.button-d > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.wInput {
-		display: block;
-		width: 100%;
-		padding: 0.5rem 0.75rem;
-		font-size: 0.875rem;
-		font-weight: 400;
-		line-height: 1.4rem;
-		color: #495057;
-		background-color: #fff;
-		background-clip: padding-box;
-		border: 1px solid #d2d6da;
-		appearance: none;
-		border-radius: 0.5rem;
-		/*transition: box-shadow 0.15s ease, border-color 0.15s ease;*/
-	}
-	.captcha-image > img {
-		border-radius: 0.5rem;
-	}
-	label[for="autoLogin"] {
-		user-select: none;
-		position: absolute;
-		margin-top: 2px;
-	}
-	.input-tips {
-		margin-top: 1px;
-	}
+    #autoLogin:checked:after {
+        transform: translateX(28px);
+    }
+
+    #autoLogin:checked:before {
+        content: attr(data-on);
+        padding-left: 0px;
+        padding-left: 2px;
+        background-color: #0c66ff;
+        color: #fff;
+        width: 24px;
+    }
+    /*结束*/
+    .header {
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .3);
+    }
+    .main-floatbox {
+        background-color: #9aaec72b;
+        border-radius: 20px;
+        margin-top: 15px;
+        /*box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, .05);*/
+    }
+    .button-c > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button-b > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button-d > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .wInput {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.4rem;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #d2d6da;
+        appearance: none;
+        border-radius: 0.5rem;
+        /*transition: box-shadow 0.15s ease, border-color 0.15s ease;*/
+    }
+    .captcha-image > img {
+        border-radius: 0.5rem;
+    }
+    label[for="autoLogin"] {
+        user-select: none;
+        position: absolute;
+        margin-top: 2px;
+    }
+    .input-tips {
+        margin-top: 1px;
+    }
 }
 @-moz-document url("https://examcoo.com/passport/register") {
-	.main-floatbox {
-		background-color: #9aaec72b;
-		border-radius: 20px;
-		margin-top: 15px;
-		box-shadow: inset 0px 0px 2px 2px rgba(17, 17, 17, .08);
-	}
-	.button-c > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.button-b > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.button-d > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.wInput {
-		display: block;
-		width: 100%;
-		padding: 0.5rem 0.75rem;
-		font-size: 0.875rem;
-		font-weight: 400;
-		line-height: 1.4rem;
-		color: #495057;
-		background-color: #fff;
-		background-clip: padding-box;
-		border: 1px solid #d2d6da;
-		appearance: none;
-		border-radius: 0.5rem;
-		/*transition: box-shadow 0.15s ease, border-color 0.15s ease;*/
-	}
-	.main-floatbox {
-		margin-bottom: 20px;
-	}
-	.captcha-image > img {
-		border-radius: 0.5rem;
-	}
-	.nobr-nopadding > jq-tooltip-over {
-		border-radius: 20px;
-	}
+    .header {
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .3);
+    }
+    .main-floatbox {
+        background-color: #9aaec72b;
+        border-radius: 20px;
+        margin-top: 15px;
+        /*box-shadow: inset 0px 0px 2px 2px rgba(0, 0, 0, .05);*/
+    }
+    .button-c > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button-b > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button-d > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .wInput {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.4rem;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #d2d6da;
+        appearance: none;
+        border-radius: 0.5rem;
+        /*transition: box-shadow 0.15s ease, border-color 0.15s ease;*/
+    }
+    .main-floatbox {
+        margin-bottom: 20px;
+    }
+    .captcha-image > img {
+        border-radius: 0.5rem;
+    }
+    .nobr-nopadding > jq-tooltip-over {
+        border-radius: 20px;
+    }
 }
 @-moz-document url("https://examcoo.com/index/mobile") {
-	.button-c > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.button-b > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.button-d > a {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-	.lightblue-header {
-		border-collapse:separate;
-	}
-	th[colspan="2"] {
-		border-radius: 10px;
-	}
-	th[colspan="2"] >div {
-		margin-left: 10px;
-		margin-bottom: 2px;
-		text-align: center;
-	}
-	.input-box >img{
-		display: none;
-	}
-	.input-box{ /*设置mobile页面二维码*/
-		background-image: url("https://img.examcoo.com/1458/themes/metro/images/v1_8j.png");
-		margin: 0 auto;
-		margin-top: 10px;
-		border-radius: 20px;
-		border-style: dashed;
-		border-width: 1px;
-		height: 300px;
-		width: 300px;
-		user-select: none;
-	}
+    .header {
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .3);
+    }
+    .button-c > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button-b > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .button-d > a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .lightblue-header {
+        border-collapse: separate;
+    }
+    th[colspan="2"] {
+        border-radius: 10px;
+    }
+    th[colspan="2"] > div {
+        margin-left: 10px;
+        margin-bottom: 2px;
+        text-align: center;
+    }
+    .input-box > img {
+        display: none;
+    }
+    .input-box {
+        /*设置mobile页面二维码*/
+        background-image: url("https://img.examcoo.com/1458/themes/metro/images/v1_8j.png");
+        margin: 0 auto;
+        margin-top: 10px;
+        border-radius: 20px;
+        border-style: dashed;
+        border-width: 1px;
+        height: 300px;
+        width: 300px;
+        user-select: none;
+    }
+}
+@-moz-document url("https://examcoo.com/usercenter") {
+    /*加载动画*/
+    #loaderInner {
+        background-image: url("data:image/svg+xml;base64,PCEtLSBCeSBTYW0gSGVyYmVydCAoQHNoZXJiKSwgZm9yIGV2ZXJ5b25lLiBNb3JlIEAgaHR0cDovL2dvby5nbC83QUp6YkwgLS0+DQo8c3ZnIHdpZHRoPSIzOCIgaGVpZ2h0PSIzOCIgdmlld0JveD0iMCAwIDM4IDM4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICAgIDxkZWZzPg0KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjguMDQyJSIgeTE9IjAlIiB4Mj0iNjUuNjgyJSIgeTI9IjIzLjg2NSUiIGlkPSJhIj4NCiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIgb2Zmc2V0PSIwJSIvPg0KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIuNjMxIiBvZmZzZXQ9IjYzLjE0NiUiLz4NCiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNmZmYiIG9mZnNldD0iMTAwJSIvPg0KICAgICAgICA8L2xpbmVhckdyYWRpZW50Pg0KICAgIDwvZGVmcz4NCiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxIDEpIj4NCiAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNiAxOGMwLTkuOTQtOC4wNi0xOC0xOC0xOCIgaWQ9Ik92YWwtMiIgc3Ryb2tlPSJ1cmwoI2EpIiBzdHJva2Utd2lkdGg9IjIiPg0KICAgICAgICAgICAgICAgIDxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDE4IDE4IiB0bz0iMzYwIDE4IDE4IiBkdXI9IjAuOXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+DQogICAgICAgICAgICA8L3BhdGg+DQogICAgICAgICAgICA8Y2lyY2xlIGZpbGw9IiNmZmYiIGN4PSIzNiIgY3k9IjE4IiByPSIxIj4NCiAgICAgICAgICAgICAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgZnJvbT0iMCAxOCAxOCIgdG89IjM2MCAxOCAxOCIgZHVyPSIwLjlzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPg0KICAgICAgICAgICAgPC9jaXJjbGU+DQogICAgICAgIDwvZz4NCiAgICA8L2c+DQo8L3N2Zz4=");
+        background-size: 100px;
+        font-size: 0px;
+        height: 150px;
+        width: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        margin: 0 auto;
+        top: 40%;
+    }
+    .fastNav > div[class="br-nopadding"] {
+        display: block;
+    }
+    .fastNav > div[class="br-padding20"] {
+        display: block;
+    }
+    .fastNavTwo > div[class="br-padding20"] {
+        display: block;
+        font-size: 20px;
+    }
+    .fastNav > div[class="br-padding20"] {
+        font-size: 20px;
+        margin: 5px;
+    }
+    a[onclick="uc.f6n_openTooltipMsgForNewPaper(this);"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_gotoAction('newclass');"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_gotoAction('joinedclass');"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_openTooltipMsgForClass(this);"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_gotoAction('joiningclass');"] {
+        font-size: 16px;
+    }
+    a[onclick="javascript:uc.f6n_gotoAction('working');"] {
+        font-size: 16px;
+    }
+    a[onclick="javascript:uc.f6n_gotoAction('doingmark');"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_openTooltipMsgForClassExam(this);"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_openTooltipMsgForClassHomework(this);"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_openTooltipMsgForClassHomework(this);"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_openTooltipMsgForClassExercise(this);"] {
+        font-size: 16px;
+    }
+    a[onclick="uc.f6n_gotoAction('mycourses');"] {
+
+        margin-left: 6px;
+    }
+    div[class="description"] {
+        margin-left: 7px;
+        margin-right: 5px;
+    }
+    .homeContent > table {
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .3);
+        border-radius: 10px;
+    }
+    .homeContent > table > tbody {
+        margin: 10px;
+    }
+    /*主页icon*/
+    .courseManageGif {
+        margin: 10px;
+    }
+    .makepaperGif {
+        margin: 10px;
+    }
+    .classGif {
+        margin: 10px;
+    }
+    .todolistGif {
+        margin: 10px;
+    }
+    .examingGif {
+        margin: 10px;
+    }
+    .freeGif {
+        margin: 10px;
+    }
+    /*结束*/
+    a[href="/help/formatpaper/index.html"] {
+        margin-left: 4px;
+    }
+    a[href="/help/guide/intelligentpaper.html"] {
+        margin-left: 4px;
+    }
+    a[href="/index/ku"] {
+        margin-left: 4px;
+    }
+    a[href="/toolkit/transfer/index"] {
+        margin-left: 4px;
+    }
+}
+@-moz-document regexp("https://examcoo.com/editor/do/view/id/.*/tid/.*/sa/.*") {
+    #webEditor {
+        margin: 0 auto;
+    }
+    #navibar {
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    .naviTitle {
+        border-radius: 20px;
+    }
+    .naviState {
+        color: rgb(0, 0, 0);
+    }
+    .fontSimsum {
+        border-radius: 20px;
+        /*margin-left:50%;*/
+    }
+    .operatePane {
+        border-radius: 20px;
+        background-color: #fff
+    }
 }
