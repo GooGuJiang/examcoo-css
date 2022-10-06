@@ -411,3 +411,24 @@
         background-color: #fff
     }
 }
+@-moz-document regexp("https://examcoo.com/editor/do/exercise/pid/.*/tid/.*/sa/.*") {
+.header {
+        box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, .3);
+    }
+	#controlPanel{
+        margin:0 auto;
+    }
+	#desk{
+		margin:0 auto;
+		
+	}
+	td[align="right"]{
+		text-align:center;
+	}
+	#controlBar{
+		background-color: rgb(255,255,255);
+		border-radius: 20px;
+		margin-bottom: 10px;
+		box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, .1);
+	}
+}
